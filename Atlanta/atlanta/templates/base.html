@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atlanta</title>
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+</head>
+<body>
+<div class="wrapper_body">
+    <div class="content_body">
+        <div class="header">
+            <div class="container">
+                <div class="header_title">
+                    Главная
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur blanditiis debitis dicta
+                    fugit ipsam laborum minima molestiae obcaecati officia optio perspiciatis quod ratione, repellat
+                    sunt vel veniam vitae, voluptates?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur blanditiis debitis dicta
+                    fugit ipsam laborum minima molestiae obcaecati officia optio perspiciatis quod ratione, repellat
+                    sunt vel veniam vitae, voluptates?
+                </div>
+
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="carusel">
+                    {% block carusel %}
+                    {% endblock %}
+                </div>
+                <div class="fix_b">
+                    <div class="fix_box">
+                        <img class="img_fix"
+                             src="https://russianelectronics.ru/wp-content/uploads/2010/06/philips_on_red_square.jpg"
+                             alt="">
+                    </div>
+                    <div class="fix_box_down">
+                        <img class="img_fix"
+                             src="https://kabekin.com/uploads/cache/1010038213/Waterfall-in-Mountains-400x270-MM-100.jpg"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content_my_product">
+                <div class="my_product_title">
+                    <h1 class="product_text_title">У нас можно заказать</h1>
+                    <hr>
+                    <div class="my_product_flex">
+                        <div class="my_product_flex_blocks"><img
+                                class="img_product"
+                                src="https://m-ff.ru/upload/resize_cache/iblock/c7b/777_383_2/c7b83f41abcab0ca6034dcaa35a04741.jpg"
+                                alt=""></div>
+                        <div class="my_product_flex_blocks"><img
+                                class="img_product"
+                                src="https://m-ff.ru/upload/resize_cache/iblock/c7b/777_383_2/c7b83f41abcab0ca6034dcaa35a04741.jpg"
+                                alt=""></div>
+                        <div class="my_product_flex_blocks_mini"><img
+                                class="img_product_mini"
+                                src="https://m-ff.ru/upload/resize_cache/iblock/c7b/777_383_2/c7b83f41abcab0ca6034dcaa35a04741.jpg"
+                                alt=""></div>
+                        <div class="my_product_flex_blocks_mini"><img
+                                class="img_product_mini"
+                                src="https://m-ff.ru/upload/resize_cache/iblock/c7b/777_383_2/c7b83f41abcab0ca6034dcaa35a04741.jpg"
+                                alt=""></div>
+                        <div class="my_product_flex_blocks_aftermini"><img
+                                class="img_product_aftermini"
+                                src="https://m-ff.ru/upload/resize_cache/iblock/c7b/777_383_2/c7b83f41abcab0ca6034dcaa35a04741.jpg"
+                                alt=""></div>
+                        <div class="my_product_flex_blocks_aftermini"><img
+                                class="img_product_aftermini"
+                                src="https://m-ff.ru/upload/resize_cache/iblock/c7b/777_383_2/c7b83f41abcab0ca6034dcaa35a04741.jpg"
+                                alt=""></div>
+                        <div class="my_product_flex_blocks_mini"><img
+                                class="img_product_mini"
+                                src="https://m-ff.ru/upload/resize_cache/iblock/c7b/777_383_2/c7b83f41abcab0ca6034dcaa35a04741.jpg"
+                                alt=""></div>
+                        <div class="my_product_flex_blocks_mini"><img
+                                class="img_product_mini"
+                                src="https://m-ff.ru/upload/resize_cache/iblock/c7b/777_383_2/c7b83f41abcab0ca6034dcaa35a04741.jpg"
+                                alt=""></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="order_form">
+        <a id="popup" href="javascript:void(0);">Open</a>
+
+        <div class="pop-overlay">
+
+            <div id="popup-window" class="popup-window">
+                <div class="inner">
+                    <div class="btn-close"><a href="javascript:void(0);">X</a></div>
+                    <div class="container1">
+                        <form action="/action_page.php">
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="fname">First Name</label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="lname">Last Name</label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="country">Country</label>
+                                </div>
+                                <div class="col-75">
+                                    <select id="country" name="country">
+                                        <option value="australia">Australia</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="usa">USA</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="subject">Subject</label>
+                                </div>
+                                <div class="col-75">
+                                    <textarea id="subject" name="subject" placeholder="Write something.."
+                                              style="height:200px"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        Футер
+    </footer>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="{% static 'js/script.js' %}"></script>
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

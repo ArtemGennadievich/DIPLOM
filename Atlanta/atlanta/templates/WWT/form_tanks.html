@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block thanks %}
+Спасибо за заказ!
+<script type="text/javascript">
+  var myTimer = window.setTimeout(timer, 7000);
+
+  function timer() {
+    window.location.href = "{% url 'home_page' %}"
+  }
+</script>
+
+{% endblock %}
+
+
+

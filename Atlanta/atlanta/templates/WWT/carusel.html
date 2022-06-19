@@ -1,61 +1,82 @@
-<div class="wrapper">
-      <input checked type=radio name="slider" id="slide1" />
-      <input type=radio name="slider" id="slide2" />
-      <input type=radio name="slider" id="slide3" />
-      <input type=radio name="slider" id="slide4" />
-      <input type=radio name="slider" id="slide5" />
+<div class="container">
+    <div class="content">
+        <div class="carusel">
+            <div class="wrapper">
+                <input class="input3" checked type=radio name="slider" id="slide1"/>
+                <input class="input3" type=radio name="slider" id="slide2"/>
+                <input class="input3" type=radio name="slider" id="slide3"/>
+                <input class="input3" type=radio name="slider" id="slide4"/>
+                <input class="input3" type=radio name="slider" id="slide5"/>
 
-      <div class="slider-wrapper">
-        <div class=inner>
-          <article>
-            <div class="info top-left">
-              <h3>Malacca</h3></div>
-            <img src="https://farm9.staticflickr.com/8059/28286750501_dcc27b1332_h_d.jpg" />
-          </article>
+                <div class="slider-wrapper">
+                    <div class=inner>
+                        <article>
+                            <div class="info top-left">
+                                <h3>{{ car_list.car_title1 }}</h3></div>
+                            <img src="{{ car_list.car_img1 }}"/>
+                        </article>
 
-          <article>
-            <div class="info bottom-right">
-              <h3>Cameron Highland</h3></div>
-            <img src="https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg" />
-          </article>
+                        <article>
+                            <div class="info bottom-right">
+                                <h3>{{ car_list.car_title2 }}</h3></div>
+                            <img src="{{ car_list.car_img2 }}"/>
+                        </article>
 
-          <article>
-            <div class="info bottom-left">
-              <h3>New Delhi</h3></div>
-            <img src="https://farm8.staticflickr.com/7455/27879053992_ef3f41c4a0_h_d.jpg" />
-          </article>
+                        <article>
+                            <div class="info bottom-left">
+                                <h3>{{ car_list.car_title3 }}</h3></div>
+                            <img src="{{ car_list.car_img3 }}"/>
+                        </article>
 
-          <article>
-            <div class="info top-right">
-              <h3>Ladakh</h3></div>
-            <img src="https://farm8.staticflickr.com/7367/27980898905_72d106e501_h_d.jpg" />
-          </article>
+                        <article>
+                            <div class="info top-right">
+                                <h3>{{ car_list.car_title4 }}</h3>
+                            </div>
+                            <img src="{{ car_list.car_img4 }}"/>
+                        </article>
+                        <article>
+                            <div class="info bottom-left">
+                                <h3>{{ car_list.car_title5 }}</h3></div>
+                            <img src="{{ car_list.car_img5 }}"/>
+                        </article>
+                    </div>
+                    <!-- .inner -->
+                </div>
+                <!-- .slider-wrapper -->
 
-          <article>
-            <div class="info bottom-left">
-              <h3>Nubra Valley</h3></div>
-            <img src="https://farm8.staticflickr.com/7356/27980899895_9b6c394fec_h_d.jpg" />
-          </article>
+                <div class="slider-prev-next-control">
+                    <label for=slide1></label>
+                    <label for=slide2></label>
+                    <label for=slide3></label>
+                    <label for=slide4></label>
+                    <label for=slide5></label>
+                </div>
+                <!-- .slider-prev-next-control -->
+
+                <div class="slider-dot-control">
+                    <label for=slide1></label>
+                    <label for=slide2></label>
+                    <label for=slide3></label>
+                    <label for=slide4></label>
+                    <label for=slide5></label>
+                </div>
+                <!-- .slider-dot-control -->
+            </div>
         </div>
-        <!-- .inner -->
-      </div>
-      <!-- .slider-wrapper -->
+        <div class="fix_b">
+            <div class="fix_box1">
+                <img class="img_fix"
+                     src="https://russianelectronics.ru/wp-content/uploads/2010/06/philips_on_red_square.jpg"
+                     alt="">
+            </div>
 
-      <div class="slider-prev-next-control">
-        <label for=slide1></label>
-        <label for=slide2></label>
-        <label for=slide3></label>
-        <label for=slide4></label>
-        <label for=slide5></label>
-      </div>
-      <!-- .slider-prev-next-control -->
+            <div class="fix_box_down">
 
-      <div class="slider-dot-control">
-        <label for=slide1></label>
-        <label for=slide2></label>
-        <label for=slide3></label>
-        <label for=slide4></label>
-        <label for=slide5></label>
-      </div>
-      <!-- .slider-dot-control -->
+                          <img class="img_fix1"
+                         src="https://kabekin.com/uploads/cache/1010038213/Waterfall-in-Mountains-400x270-MM-100.jpg"
+                         alt="">
+
+            </div>
+        </div>
     </div>
+</div>

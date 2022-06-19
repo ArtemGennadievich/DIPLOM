@@ -1,0 +1,231 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+{% load static %}
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+<head>
+    <!-- Заголовок страницы в браузере -->
+    <title>{{ title }}</title>
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="{% static 'css/style_catalog.css' %}">
+    <!-- Кодировка страницы -->
+    <meta charset="UTF-8">
+    <!-- Адаптив -->
+    <meta name="viewport" content="width=device-width">
+</head>
+<!-- Отображаемое тело страницы -->
+<body>
+<!-- Оболочка (grid-контейнер) -->
+<div class="wrapper">
+    <!-- Шапка (grid - элемент) -->
+    <header class="header">
+        <a href="" class="header__logo"></a>
+        <nav class="header__menu">
+            <ul class="header__list">
+                <li><a href="" class="header__link">Пункт меню</a></li>
+                <li><a href="" class="header__link">Пункт меню</a></li>
+                <li><a href="" class="header__link">Пункт меню</a></li>
+                <li><a href="" class="header__link">Пункт меню</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Контент (grid-элемент + grid-контейнер) -->
+    <main class="main">
+        <!-- Сайдбар (grid-элемент) -->
+        <aside class="sidebar">
+            <div class="vertmenu">
+                <ul>
+                    <li>
+                        <a class="active" href="#">Пункт меню 1</a>
+                        <input type="checkbox" class="subCat" id="1" checked="checked"/>
+                        <label class="chka" for="1"></label>
+                        <ul style="display:none">
+                            <li>
+                                <a class="active" href="#">Пункт меню 1.1</a>
+                                <input type="checkbox" class="subCat" id="1.1" checked="checked"/>
+                                <label class="chka" for="1.1"></label>
+
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню 1.2</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню 1.3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Пункт меню 2</a>
+                        <input type="checkbox" class="subCat" id="2"/>
+                        <label class="chka" for="2"></label>
+                        <ul style="display:none">
+                            <li>
+                                <a href="#">Пункт меню 2.1</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню 2.2</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню 2.3</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню 2.4</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Пункт меню 3</a>
+                        <input type="checkbox" class="subCat" id="3"/>
+                        <label class="chka" for="3"></label>
+                        <ul style="display:none">
+                            <li>
+                                <a href="#">Пункт меню 3.1</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню 3.2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Пункт меню 4</a>
+                        <input type="checkbox" class="subCat" id="4"/>
+                        <label class="chka" for="4"></label>
+                        <ul style="display:none">
+                            <li>
+                                <a href="#">Пункт меню 4.1</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню 4.2</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню 4.3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Пункт меню 4</a>
+                        <input type="checkbox" class="subCat" id="5"/>
+                        <label class="chka" for="5"></label>
+                        <ul style="display:none">
+                            <li>
+                                <a href="#">Пункт меню 4.1</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню 4.2</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню 4.3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Пункт меню 4</a>
+                        <input type="checkbox" class="subCat" id="6"/>
+                        <label class="chka" for="6"></label>
+                        <ul style="display:none">
+                            <li>
+                                <a href="#">Пункт меню 4.1</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню 4.2</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню 4.3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Пункт меню 4</a>
+                        <input type="checkbox" class="subCat" id="7"/>
+                        <label class="chka" for="7"></label>
+                        <ul style="display:none">
+                            <li>
+                                <a href="#">Пункт меню 4.1</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню 4.2</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню 4.3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Пункт меню 4</a>
+                        <input type="checkbox" class="subCat" id="8"/>
+                        <label class="chka" for="8"></label>
+                        <ul style="display:none">
+                            <li>
+                                <a href="#">Пункт меню 4.1</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню 4.2</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню 4.3</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <section class="content__products products">
+            <h2 class="products__title">Товары</h2>
+            <div class="products__items">
+                <div class="products__item">
+                    <div class="products__image">
+                        <img src="img/fls.jpg" alt="">
+                    </div>
+                    <div class="products__name">Футболка "Живи, а работай в свободное время!"</div>
+                    {% for p in ord_new %}
+                    <a href="{{ p.get_absolute_url }}" class="products__button">Купить</a>
+                    {% endfor %}
+                </div>
+                <div class="products__item">
+                    <div class="products__image">
+                        <img src="img/fls.jpg" alt="">
+                    </div>
+                    <div class="products__name">Футболка "Живи, а работай в свободное время!"</div>
+                    <a href="" class="products__button">Купить</a>
+                </div>
+                <div class="products__item">
+                    <div class="products__image">
+                        <img src="img/fls.jpg" alt="">
+                    </div>
+                    <div class="products__name">Футболка "Живи, а работай в свободное время!"</div>
+                    <a href="" class="products__button">Купить</a>
+                </div>
+                <div class="products__item">
+                    <div class="products__image">
+                        <img src="img/fls.jpg" alt="">
+                    </div>
+                    <div class="products__name">Футболка "Живи, а работай в свободное время!"</div>
+                    <a href="" class="products__button">Купить</a>
+                </div>
+                <div class="products__item">
+                    <div class="products__image">
+                        <img src="img/fls.jpg" alt="">
+                    </div>
+                    <div class="products__name">Футболка "Живи, а работай в свободное время!"</div>
+                    <a href="" class="products__button">Купить</a>
+                </div>
+                <div class="products__item">
+                    <div class="products__image">
+                        <img src="img/fls.jpg" alt="">
+                    </div>
+                    <div class="products__name">Футболка "Живи, а работай в свободное время!"</div>
+                    <a href="" class="products__button">Купить</a>
+                </div>
+            </div>
+        </section>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__copy">Copy, 2020</div>
+        <div class="footer__text">Lorem ipsum dolor sit amet.</div>
+    </footer>
+</div>
+</body>
+</html>

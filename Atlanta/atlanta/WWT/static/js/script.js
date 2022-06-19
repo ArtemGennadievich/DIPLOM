@@ -2,6 +2,7 @@ var $popUp = $('#popup');
   var $popOverlay = $('.pop-overlay');
   var $popWindow = $('#popup-window');
   var $popClose = $('.popup-window .btn-close');
+  var $popClose2 = $('input_submit_close');
 
   $popUp.on('click', function(){
     $popOverlay.fadeIn();
@@ -9,6 +10,10 @@ var $popUp = $('#popup');
   });
 
   $popClose.on('click', function(){
+    $popOverlay.fadeOut();
+    $popWindow.fadeOut();
+  });
+    $popClose2.on('click', function(){
     $popOverlay.fadeOut();
     $popWindow.fadeOut();
   });

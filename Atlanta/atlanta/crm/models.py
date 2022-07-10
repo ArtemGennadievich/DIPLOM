@@ -15,7 +15,7 @@ class StatusCrm(models.Model):
 class Order(models.Model):
     order_name = models.CharField(max_length=200, verbose_name='Имя')
     order_phone = models.CharField(max_length=200, verbose_name='Телефон')
-    order_email = models.EmailField(max_length=200, verbose_name='Email')
+    order_email = models.EmailField(max_length=200, verbose_name='Тип заказа')
     order_comment = models.TextField(verbose_name='Комментарий', null=True)
     order_status = models.ForeignKey(StatusCrm, on_delete=models.PROTECT, null=True, blank=True, verbose_name='Статус')
     order_date_add = models.DateTimeField(auto_now_add=True, verbose_name='Время создания')

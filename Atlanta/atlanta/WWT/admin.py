@@ -9,6 +9,7 @@ class WWTVisual(admin.ModelAdmin):
     fields = ('car_title', 'car_text', 'get_img', 'car_status', 'car_img')
     readonly_fields = ('get_img',)
 
+
     def get_img(self, obj):
         if obj.car_img:
             return mark_safe(f'<img src="{obj.car_img.url}" width="200">')

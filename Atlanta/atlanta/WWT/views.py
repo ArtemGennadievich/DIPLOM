@@ -86,7 +86,6 @@ def wwt_def(request):
         'content_list': content_list,
         'form_product': form_product,
     }
-
     return render(request, 'WWT/main.html', {'car_list': car_list})
 
 
@@ -108,6 +107,7 @@ menu = [
     {'title': 'Каталог', 'url_name': 'catalog'},
     {'title': 'Главная', 'url_name': 'home_page'},
 ]
+form_product = OrderForm()
 
 
 class Catalog(ListView):
@@ -118,16 +118,60 @@ class Catalog(ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Каталог'
+        context['cat_selected'] = 0
         context['menu'] = menu
+        context['form_product'] = form_product
         return context
+
+    def get_queryset(self):
+        return OrderNew.objects.filter(order_is_published=True).select_related('cat')
 
 
 class ShowPost(DetailView):
     model = OrderNew
-    template_name = 'WWT/orger.html'
+    template_name = 'WWT/order.html'
     context_object_name = 'post'
     slug_url_kwarg = 'post_slug'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['form_product'] = form_product
         return context
+
+
+class ShowForm(ListView):
+    model = OrderNew
+    template_name = 'WWW/form2'
+    context_object_name = 'form'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form_product'] = form_product
+        return context
+
+
+class CatalogCategory(ListView):
+    model = OrderNew
+    template_name = 'WWT/catalog.html'
+    context_object_name = 'ord_new'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Категория - ' + str(context['ord_new'][0].cat)
+        context['cat_selected'] = context['ord_new'][0].cat_id
+        context['menu'] = menu
+        context['form_product'] = form_product
+        return context
+
+    def get_queryset(self):
+        return OrderNew.objects.filter(cat__slug=self.kwargs['cat_slug'],
+                                       order_is_published=True).select_related(
+            'cat')
+
+
+def About_me(request):
+    return render(request, 'WWT/about_me.html')
+
+
+def delivery(request):
+    return render(request, 'WWT/delivery.html')

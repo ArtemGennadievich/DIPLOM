@@ -12,5 +12,5 @@ class Main(models.Model):
         return self.main_title
 
     class Meta:
-        verbose_name = 'Блок_контент'
-        verbose_name_plural = 'Блоки_контента'
+        verbose_name = 'Блок контент'
+        verbose_name_plural = 'Блоки контента'
